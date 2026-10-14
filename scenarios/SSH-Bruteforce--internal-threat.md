@@ -29,8 +29,8 @@ This scenario simulates a **dictionary-based SSH bruteforce attack** originating
 ## 🔧 Zabbix Configuration
 
 ### Item: Capture malicious IP from /var/log/auth.log
- 
-<img width="1111" height="595" alt="Zabbix Item Configuration - Auth Log Monitoring" src="https://github.com/user-attachments/assets/d01bc01e-645c-4771-b68f-a3b12bfb7710" />
+<img width="1111" height="595" alt="Zabbix Item Configuration - Auth Log Monitoring" src="https://github.com/user-attachments/assets/17302539-71b4-408f-80fa-03945230024b" />
+
 
 **Item Configuration:**
 - **Type:** Zabbix Agent (Active)
@@ -39,8 +39,8 @@ This scenario simulates a **dictionary-based SSH bruteforce attack** originating
 - **Update Interval:** 1 second
 
 ### Trigger: SSH-Bruteforce Detected
+<img width="1201" height="880" alt="Zabbix Trigger Configuration - SSH Bruteforce" src="https://github.com/user-attachments/assets/8a21b3cb-578b-4fe0-a874-8775bcacc6fa" />
 
-<img width="1201" height="880" alt="Zabbix Trigger Configuration - SSH Bruteforce" src="https://github.com/user-attachments/assets/67564e32-3587-4fd6-9622-42abf801d568" />
 
 **Trigger Logic:**
 ```javascript
@@ -58,9 +58,8 @@ count(//var/log/auth.log, "Failed password", "10s") > 5
 ## 💻 Attack Simulation
 
 ### Execution from Kali Linux
+<img width="1033" height="303" alt="Kali Linux - Hydra SSH Bruteforce Attack" src="https://github.com/user-attachments/assets/c1e01fcc-ca17-4740-b06d-55c2dad29e34" />
 
-<img width="1033" height="303" alt="Kali Linux - Hydra SSH Bruteforce Attack" src="https://github.com/user-attachments/assets/4e776646-acfe-4325-be23-7c192537cd58" />
- 
 
 ```bash
 hydra -l client1 -P /usr/share/wordlists/rockyou.txt -t 4 ssh://192.168.20.151
@@ -77,15 +76,15 @@ hydra -l client1 -P /usr/share/wordlists/rockyou.txt -t 4 ssh://192.168.20.151
 ## 🔄 SOAR Pipeline Execution
 
 ### 1. Alert Generation
+<img width="1282" height="816" alt="Zabbix Dashboard - Problem Generation" src="https://github.com/user-attachments/assets/6dc75a4b-e3b1-4ce7-b60f-74d2992daef6" />
 
-<img width="1282" height="816" alt="Zabbix Dashboard - Problem Generation" src="https://github.com/user-attachments/assets/2dc59201-3502-4d2e-b4fd-bba2aa2bc8d9" />
 
 
 The alert appears in the Problems Dashboard with **High** severity, confirming the SSH-Bruteforce detection on host `ubuntu-client1`.
 
 ### 2. Webhook Transmission
+<img width="1424" height="747" alt="Zabbix Action Log - Webhook Sent" src="https://github.com/user-attachments/assets/8f163a48-0a46-4881-8517-18b1657817a6" />
 
-<img width="1424" height="747" alt="Zabbix Action Log - Webhook Sent" src="https://github.com/user-attachments/assets/cc37a128-c7fa-4b55-960c-512ed2f1b307" />
 
 **Action Log Details:**
 - **Status:** Sent ✓
@@ -95,8 +94,8 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 - **MITRE Link:** Included in payload
 
 ### 3. Shuffle Workflow Execution
+<img width="999" height="658" alt="Shuffle Workflow - Internal Threat Processing" src="https://github.com/user-attachments/assets/24dfdf15-9ce7-4478-bb51-f6896deb313c" />
 
-<img width="999" height="658" alt="Shuffle Workflow - Internal Threat Processing" src="https://github.com/user-attachments/assets/ee941d33-f57a-4798-92c1-a6663d518ccc" />
 
 **Workflow Path:**
 1. Entry Node (Webhook) → Received ✓
@@ -107,8 +106,8 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 **Key Observation:** The workflow bypasses pfSense blocking nodes (upper branch) since the IP is classified as internal.
 
 ### 4. Execution Status
+<img width="934" height="339" alt="Shuffle - Execution History" src="https://github.com/user-attachments/assets/29cbd9f2-1670-42cb-bd7f-9bf1f2073e87" />
 
-<img width="934" height="339" alt="Shuffle - Execution History" src="https://github.com/user-attachments/assets/89b56bf9-cd8a-499f-b4ee-a5bc90c2178c" />
 
 **Execution Metrics:**
 - **Status:** FINISHED ✓
@@ -117,9 +116,8 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 - **Total Duration:** ~53 seconds (includes human interaction time)
 
 ### 5. Raw Payload Reception
+<img width="571" height="313" alt="Shuffle - Webhook Payload" src="https://github.com/user-attachments/assets/cb83fbf8-4af5-4c89-817e-a6e477e336e4" />
 
-![](https://github.com/user-attachments/assets/61830bd1-6c2d-49a8-975e-9b78fc6a740f)  
-<img width="571" height="313" alt="Shuffle - Webhook Payload" src="https://github.com/user-attachments/assets/4b3ed8ef-da0a-428e-a7f8-d77a3c79e5e8" />
 
 **Payload Contains:**
 - Subject: Problem: SSH-Bruteforce
@@ -129,8 +127,8 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 - Complete alert context
 
 ### 6. Data Normalization
+<img width="577" height="417" alt="Shuffle - Python Parse Output" src="https://github.com/user-attachments/assets/35f90e38-5296-4327-8761-c03831be8de8" />
 
-<img width="577" height="417" alt="Shuffle - Python Parse Output" src="https://github.com/user-attachments/assets/a45009f8-16d4-45ba-af8f-e54a9fb5db38" />
 
 **Parsed Data (13 items):**
 ```json
@@ -156,15 +154,15 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 ## 📋 Jira Ticket Creation
 
 ### API Response
+<img width="477" height="274" alt="Jira API - Ticket Created" src="https://github.com/user-attachments/assets/c376417a-c024-4c0d-8d20-4616d13c2962" />
 
-<img width="477" height="274" alt="Jira API - Ticket Created" src="https://github.com/user-attachments/assets/0fe4f954-c567-4710-b9e3-31de331d2017" />
+
 
 **Response Details:**
 - **Status:** 201 Created
 
 ### Jira Ticket View
-
-<img width="508" height="331" alt="Jira Ticket - Internal SSH Threat" src="https://github.com/user-attachments/assets/237bde5c-477f-4413-9988-15ca062a06ec" />
+<img width="508" height="331" alt="Jira Ticket - Internal SSH Threat" src="https://github.com/user-attachments/assets/921b265a-cb1b-4105-8905-0559e6a6ac2b" />
 
 
 **Ticket Details:**
@@ -182,13 +180,12 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 ## 💬 Slack Notification
 
 ### API Response
+<img width="452" height="328" alt="Slack API - Notification Delivered" src="https://github.com/user-attachments/assets/7090aa69-4fa7-495f-8c6f-a7421f5658c7" />
 
-<img width="452" height="328" alt="Slack API - Notification Delivered" src="https://github.com/user-attachments/assets/8201db5d-8ebc-4cf0-91d1-f9c4c86d8dcb" />
 
 
 ### Slack Alert Card
-
-<img width="515" height="193" alt="Slack - Internal Threat Notification Card" src="https://github.com/user-attachments/assets/1c130780-b0d0-4e0a-bf71-670163bc27d4" />
+<img width="515" height="193" alt="Slack - Internal Threat Notification Card" src="https://github.com/user-attachments/assets/5af25dbc-bfc3-4b83-b478-208a4ae5a2b3" />
 
 
 **Notification Content:**
