@@ -30,8 +30,8 @@ This scenario simulates a **protocol anomaly attack (Protocol Mismatch)** origin
 ## 🔧 Zabbix Configuration
 
 ### Item: Snort Anomalous Connection Logs
+<img width="840" height="442" alt="Zabbix Item - Protocol Anomaly Monitoring" src="https://github.com/user-attachments/assets/e293b7a7-c946-4720-82fd-b1a96c5aae56" />
 
-<img width="840" height="442" alt="Zabbix Item - Protocol Anomaly Monitoring" src="https://github.com/user-attachments/assets/45061715-bd2d-45a3-9b31-1fb03d605639" />
 
 
 **Item Configuration:**
@@ -42,8 +42,7 @@ This scenario simulates a **protocol anomaly attack (Protocol Mismatch)** origin
 - **Filter Pattern:** "Protocol mismatch"
 
 ### RegEx Pre-processing for External IP Extraction
-
-<img width="844" height="247" alt="Zabbix Preprocessing - External IP Extraction" src="https://github.com/user-attachments/assets/12e56774-1fda-4d00-8189-4604a2c0deeb" />
+<img width="844" height="247" alt="Zabbix Preprocessing - External IP Extraction" src="https://github.com/user-attachments/assets/ea8076fe-399c-4d9e-9869-9df6a3303afd" />
 
 
 **RegEx Pattern:** Extracts external IP from Snort WAN logs:
@@ -52,8 +51,7 @@ TCP\s+([\d.]+):\d+\s+->\s+[\d.]+:\d+
 ```
 
 ### Trigger: Protocol-Mismatch
-
-<img width="844" height="438" alt="Zabbix Trigger - Protocol Mismatch" src="https://github.com/user-attachments/assets/1c9792af-d3d5-4d15-855c-7bbec3436d11" />
+<img width="844" height="438" alt="Zabbix Trigger - Protocol Mismatch" src="https://github.com/user-attachments/assets/81251c66-2427-49fb-950e-2b7931c4e76d" />
 
 
 **Trigger Properties:**
@@ -67,15 +65,13 @@ TCP\s+([\d.]+):\d+\s+->\s+[\d.]+:\d+
 ## 🔄 SOAR Pipeline Execution
 
 ### 1. Alert Generation
-
-<img width="993" height="471" alt="Zabbix Dashboard - Protocol Anomaly Alert" src="https://github.com/user-attachments/assets/aadcca06-d070-4acd-8a64-30872286a906" />
+<img width="993" height="471" alt="Zabbix Dashboard - Protocol Anomaly Alert" src="https://github.com/user-attachments/assets/d560d4c1-f93c-48bf-866c-46481e6f222a" />
 
 
 The alert appears in the Problems Dashboard with **High** severity, confirming the Protocol-Mismatch detection on host `pfSense-FW`.
 
 ### 2. Webhook Transmission
-
-<img width="986" height="427" alt="Zabbix Action Log - External Webhook" src="https://github.com/user-attachments/assets/5652de18-1c4d-4129-a1e6-ffe8928f042a" />
+<img width="986" height="427" alt="Zabbix Action Log - External Webhook" src="https://github.com/user-attachments/assets/6346f842-0219-4a44-b690-40afe5dae7c6" />
 
 
 **Action Log Details:**
@@ -85,8 +81,7 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 - **MITRE Technique:** T1571
 
 ### 3. Shuffle Workflow Execution
-
-<img width="1321" height="619" alt="Shuffle Workflow - External Threat Processing" src="https://github.com/user-attachments/assets/aa9a0536-f105-4df4-9183-c13139459930" />
+<img width="1321" height="619" alt="Shuffle Workflow - External Threat Processing" src="https://github.com/user-attachments/assets/405fcf12-1026-4df9-876a-42291f975da5" />
 
 
 
@@ -102,8 +97,7 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 9. Slack External → Notification sent ✓
 
 ### 4. Execution Status
-
-<img width="817" height="199" alt="Shuffle - External Workflow Status" src="https://github.com/user-attachments/assets/f21e3c0b-cf2b-4b73-85ee-b64a5572e26b" />
+<img width="817" height="199" alt="Shuffle - External Workflow Status" src="https://github.com/user-attachments/assets/41705445-1f33-4d8a-8903-a8066257623e" />
 
 
 **Execution Metrics:**
@@ -112,8 +106,7 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 - **Processing Time:** < 5 seconds
 
 ### 5. Raw Payload Reception
-
-<img width="708" height="405" alt="Shuffle - External Payload" src="https://github.com/user-attachments/assets/61d5c8f0-84bb-443a-be92-5cd2c79b9d67" />
+<img width="708" height="405" alt="Shuffle - External Payload" src="https://github.com/user-attachments/assets/6bfc631b-4d52-43e4-9503-5f5ac625ed9b" />
 
 
 
@@ -125,8 +118,7 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 - System metrics
 
 ### 6. Data Normalization
-
-<img width="712" height="519" alt="Shuffle - Parse Output External" src="https://github.com/user-attachments/assets/58c60924-a02c-4616-b861-286160f83a92" />
+<img width="712" height="519" alt="Shuffle - Parse Output External" src="https://github.com/user-attachments/assets/66a54b8d-bd65-47f3-baaa-cd3f22c85d59" />
 
 
 **Parsed Data:**
@@ -153,8 +145,7 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 ## 🔍 Threat Intelligence Enrichment
 
 ### VirusTotal API Response
-
-<img width="936" height="487" alt="VirusTotal - Malicious IP Confirmation" src="https://github.com/user-attachments/assets/afce6a07-67be-4f03-a0be-e41743baeca7" />
+<img width="936" height="487" alt="VirusTotal - Malicious IP Confirmation" src="https://github.com/user-attachments/assets/f7e0d0fa-cf1e-44b1-b0d0-3267f6e57456" />
 
 
 **VirusTotal Results:**
@@ -181,8 +172,7 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 ## 📋 Jira Ticket Creation
 
 ### API Response
-
-<img width="403" height="173" alt="Jira API - External Ticket Created" src="https://github.com/user-attachments/assets/8d2aa222-3c6a-4365-8caf-34c8027958f3" />
+<img width="403" height="173" alt="Jira API - External Ticket Created" src="https://github.com/user-attachments/assets/06444068-011e-4d53-b39a-294fae590f26" />
 
 
 
@@ -190,8 +180,8 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 - **Status:** 201 Created
 
 ### Jira Ticket View
-
-<img width="407" height="456" alt="Jira Ticket - External Threat" src="https://github.com/user-attachments/assets/8f9b8d3c-096e-4e62-9b8d-a933c5502883" />
+<img width="407" height="456" alt="Jira Ticket - External Threat" src="https://github.com/user-attachments/assets/7d0bee69-241d-4a6b-87e4-3ce5d86a4d2c" />
+<img width="407" height="456" alt="Jira Ticket - External Threat" src="https://github.com/user-attachments/assets/7f0ac1de-27e0-49b9-a8f1-0a1fea2d3a3b" />
 
 
 
@@ -214,8 +204,7 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 ## 🛡️ Active Remediation on pfSense
 
 ### API Response - Block IP
-
-<img width="709" height="532" alt="pfSense API - IP Added to Blacklist" src="https://github.com/user-attachments/assets/d8a248ec-31d9-4959-b914-c42618358e9a" />
+<img width="709" height="532" alt="pfSense API - IP Added to Blacklist" src="https://github.com/user-attachments/assets/5dfe314f-4392-42db-93eb-c6f2a97714ca" />
 
 
 **Response Details:**
@@ -224,8 +213,7 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 - **IP:** 185.220.101.5
 
 ### API Response - Apply Changes
-
-<img width="706" height="507" alt="pfSense API - Changes Applied" src="https://github.com/user-attachments/assets/b817888d-3655-4dcf-a4aa-a96455d9cec5" />
+<img width="706" height="507" alt="pfSense API - Changes Applied" src="https://github.com/user-attachments/assets/0bdaf3d3-8e3f-4833-b9d7-ccced821b3f7" />
 
 
 **Response Details:**
@@ -234,8 +222,7 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 - **Result:** Rules reloaded with new blocking rule
 
 ### pfSense Interface Verification
-
-<img width="976" height="280" alt="pfSense - IP Blocked Confirmation" src="https://github.com/user-attachments/assets/ddc8276d-591f-4b8c-ab2a-de593ba0ab59" />
+<img width="976" height="280" alt="pfSense - IP Blocked Confirmation" src="https://github.com/user-attachments/assets/bc3e31f3-2dc4-43de-8b85-cbd46d65e98b" />
 
 
 **Alias Details:**
@@ -249,12 +236,13 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 ## 📝 Jira Ticket Lifecycle Management
 
 ### Comment Injection
+<img width="383" height="274" alt="Jira API - Comment Added" src="https://github.com/user-attachments/assets/361c2df7-5f62-4ac0-b6fa-33e7d706fb62" />
 
-<img width="383" height="274" alt="Jira API - Comment Added" src="https://github.com/user-attachments/assets/1d42a8e4-198f-4b0f-b02a-e6805e79a362" />
+
 
 ### Jira Comment View
+<img width="1153" height="291" alt="Jira - Technical Comment" src="https://github.com/user-attachments/assets/2c179c38-cc88-448c-bacc-54006a12836a" />
 
-<img width="1153" height="291" alt="Jira - Technical Comment" src="https://github.com/user-attachments/assets/81dedfc4-9e1f-4abe-b022-eb288590b731" />
 
 
 **Comment Content:**
@@ -263,13 +251,12 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 - Timestamp of remediation
 
 ### Transition to Completed Status
+<img width="418" height="200" alt="image" src="https://github.com/user-attachments/assets/712cbf06-e7c8-44db-bba5-4fc2c07a9fd7" />
 
-<img width="418" height="200" alt="Jira API - Status Transition" src="https://github.com/user-attachments/assets/566d56ca-4319-42cc-9c1b-f932d7b85006" />
 
 
 ### Completed Ticket View
-
-<img width="642" height="646" alt="Jira - Completed Ticket" src="https://github.com/user-attachments/assets/7446347c-8faf-4151-a3e1-94a94b5364b2" />
+<img width="642" height="646" alt="Jira - Completed Ticket" src="https://github.com/user-attachments/assets/48b75a39-fa4f-497d-ae8b-d691759b5fe0" />
 
 
 **Ticket Final Status:**
@@ -282,8 +269,7 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 ## 🔄 Zabbix Alert Closure
 
 ### API Response - Close Alert
-
-<img width="406" height="251" alt="Zabbix API - Alert Closed" src="https://github.com/user-attachments/assets/be42b807-a656-4014-bb33-82f85621813c" />
+<img width="406" height="251" alt="Zabbix API - Alert Closed" src="https://github.com/user-attachments/assets/25f5e587-b968-475e-a5f0-29f802369c12" />
 
 
 **Response Details:**
@@ -292,8 +278,7 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 - **Message:** "Alerte cloturee automatiquement par Shuffle SOAR. L'IP malveillante a ete bannie avec succes sur le pare-feu PfSense."
 
 ### Zabbix Console - Resolved Status
-
-<img width="985" height="469" alt="Zabbix - Alert Resolved" src="https://github.com/user-attachments/assets/cfc1fe74-70a6-4fc3-9171-8c6ba4261a49" />
+<img width="985" height="469" alt="Zabbix - Alert Resolved" src="https://github.com/user-attachments/assets/d76c2e1a-88b7-4ae8-b191-48395cd89a24" />
 
 
 **Status Update:**
@@ -306,13 +291,12 @@ The alert appears in the Problems Dashboard with **High** severity, confirming t
 ## 💬 Slack Closure Notification
 
 ### API Response
+<img width="379" height="271" alt="Slack API - Closure Notification Sent" src="https://github.com/user-attachments/assets/d20f77cc-21f9-46e2-8c2a-10429b84aea7" />
 
-<img width="379" height="271" alt="Slack API - Closure Notification Sent" src="https://github.com/user-attachments/assets/d540c05c-54b5-42e2-be66-dcce53716c14" />
 
 
 ### Slack Final Alert Card
-
-<img width="422" height="146" alt="Slack - External Threat Closure" src="https://github.com/user-attachments/assets/716c18bc-3a12-4d08-8eb7-d95f62472267" />
+<img width="422" height="146" alt="Slack - External Threat Closure" src="https://github.com/user-attachments/assets/015ba9f6-f280-4eb9-b997-b6076d67da66" />
 
 
 **Notification Content:**
