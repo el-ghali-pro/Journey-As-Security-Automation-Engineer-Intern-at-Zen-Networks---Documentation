@@ -83,17 +83,17 @@ Alerts, raised by **Zabbix** and **Snort**, are automatically parsed, cross-chec
 
 ### Lab Architecture
 <p align="center">
-<img width="821" height="1031" alt="SOC-Lab-Architecture" src="https://github.com/user-attachments/assets/8a0d9b3c-3497-4beb-889d-65f0cbae7b30" />
+<img width="410" height="515" alt="SOC-Lab-Architecture" src="https://github.com/user-attachments/assets/8a0d9b3c-3497-4beb-889d-65f0cbae7b30" />
 
 
 ### Threat Flow (Logical Mitigation)
 <p align="center">
-<img width="448" height="600" alt="SOAR-pipeline-logic-process" src="https://github.com/user-attachments/assets/b221f491-0f4f-4957-8381-52fcabfd26bc" />
+<img width="324" height="400" alt="SOAR-pipeline-logic-process" src="https://github.com/user-attachments/assets/b221f491-0f4f-4957-8381-52fcabfd26bc" />
 
 
 ### SOAR Pipeline
 <p align="center">
-<img width="538" height="334" alt="SOAR-pipeline" src="https://github.com/user-attachments/assets/e8ae0364-244d-436b-a882-3da8e6b1ec39" />
+<img width="700" height="500" alt="SOAR-pipeline" src="https://github.com/user-attachments/assets/e8ae0364-244d-436b-a882-3da8e6b1ec39" />
 
 
 
