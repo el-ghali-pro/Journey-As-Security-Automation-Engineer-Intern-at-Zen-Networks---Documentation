@@ -1,7 +1,3 @@
-# Journey-As-Security-Automation-Engineer-Intern-at-Zen-Networks---Documentation
-Final Studies Project (PFE) where I developed a SOAR (Security Orchestration &amp; Automation Response) Architecture for incident response issued from Zabbix alerts.
-
-
 <div align="center">
 
 # 🛡️ Automated Incident Response Pipeline (SOAR)
@@ -87,18 +83,18 @@ Alerts, raised by **Zabbix** and **Snort**, are automatically parsed, cross-chec
 
 ### Lab Architecture
 <p align="center">
-<img width="500" height="700" alt="SOC Lab Architecture" src="https://github.com/user-attachments/assets/a3014130-f351-4999-9d73-99e5c955d616" />
-</p>
+<img width="821" height="1031" alt="SOC-Lab-Architecture" src="https://github.com/user-attachments/assets/8a0d9b3c-3497-4beb-889d-65f0cbae7b30" />
+
 
 ### Threat Flow (Logical Mitigation)
 <p align="center">
-<img width="500" height="600" alt="SOAR Pipeline Logic Process" src="https://github.com/user-attachments/assets/e8adea6c-0381-4d2a-9fb8-4ef1a651451c" />
-</p>
+<img width="448" height="600" alt="SOAR-pipeline-logic-process" src="https://github.com/user-attachments/assets/b221f491-0f4f-4957-8381-52fcabfd26bc" />
+
 
 ### SOAR Pipeline
 <p align="center">
-<img width="500" height="300" alt="SOAR Pipeline" src="https://github.com/user-attachments/assets/c87b1887-26d0-43c7-9a38-3859ecb5be6c" />
-</p>
+<img width="538" height="334" alt="SOAR-pipeline" src="https://github.com/user-attachments/assets/e8ae0364-244d-436b-a882-3da8e6b1ec39" />
+
 
 
 
