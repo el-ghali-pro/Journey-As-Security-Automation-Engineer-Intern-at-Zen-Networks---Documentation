@@ -1,8 +1,7 @@
 # Zabbix Dashboard Configuration & UserParameters
 
 ## 📊 Dashboard Overview
-
-<img width="1296" height="816" alt="Zabbix SOAR Dashboard" src="https://github.com/user-attachments/assets/af3169bf-f4ca-4dbd-b168-0af85225d23e" />
+<img width="1296" height="816" alt="Zabbix-dashboard" src="https://github.com/user-attachments/assets/8862758c-88fc-44db-b51e-aa1757a2899e" />
 
 ---
 
